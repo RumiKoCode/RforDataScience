@@ -10,3 +10,10 @@ diagnose_outlier(mpg)
 ggplot(mpg,aes(x=mpg$cty))+
   geom_boxplot()+
   coord_flip()
+#测试线性回归模型
+head(iris)
+mod_sum <- summary(lm(iris$Sepal.Length~iris$Sepal.Width,iris))
+mod_sum
+ggplot(iris,aes(x=iris$Sepal.Width,y=iris$Sepal.Length))+
+  geom_point()+
+  geom_smooth(method = "lm")
