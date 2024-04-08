@@ -12,8 +12,11 @@ ggplot(mpg,aes(x=mpg$cty))+
   coord_flip()
 #测试线性回归模型
 head(iris)
-mod_sum <- summary(lm(iris$Sepal.Length~iris$Sepal.Width,iris))
+mod_sum <- summary(lm(iris$Sepal.Length~iris$Sepal.Width+iris$Petal.Length,iris))
 mod_sum
-ggplot(iris,aes(x=iris$Sepal.Width,y=iris$Sepal.Length))+
-  geom_point()+
-  geom_smooth(method = "lm")
+#测试多元线性回归与可视化
+iris_lm <- lm(iris$Sepal.Length~iris$Sepal.Width+iris$Petal.Length,iris)
+#同质检验
+par(mfrow=c(2,2))
+plot(iris_lm)
+
