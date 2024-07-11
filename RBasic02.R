@@ -48,5 +48,5 @@ fviz_eig(biopsy_pca,addlabels = TRUE,ylim=c(0,70))
 fviz_pca_biplot(biopsy_pca,label = "var")
 
 
-
+library(rmarkdown)
 
