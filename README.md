@@ -13,4 +13,4 @@
 # chapter11 沟通汇报
 # chapter12 Quarto
 # chapter13 R语言版本控制
-# chapter14 Rstudio使用技巧
+# chapter14 Rstudio的使用技巧
